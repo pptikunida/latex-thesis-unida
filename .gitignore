@@ -1,0 +1,23 @@
+# File-file sementara LaTeX
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.bbl
+*.bcf
+*.blg
+*.out
+*.synctex.gz
+*.run.xml
+
+# Output
+*.pdf
+
+# File-file dari editor
+.vscode/
+.idea/
+
+# File sistem operasi
+.DS_Store
+Thumbs.db

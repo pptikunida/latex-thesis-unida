@@ -1,0 +1,32 @@
+% ===========================================================================================================
+% ============================================ FIGURE ASSETS ================================================
+% ===========================================================================================================
+\newcommand{\contohfigur} %UNIQUE COMMAND
+{%
+	\begin{figure}[h!]
+		\centering %position
+		\includegraphics[width=0.8\textwidth]{assets/contoh.jpg}
+		\caption{ini cuma contoh doang.}
+		\label{fig:contoh-f} %UNIQUUE COMMAND
+	\end{figure}
+}
+
+% ===========================================================================================================
+% ============================================ TABLE ASSETS =================================================
+% ===========================================================================================================
+\newcommand{\contohtabel} %UNIQUE COMMAND     
+{%
+	\begin{table}[h!]
+		\centering
+		\caption{contoh tabel.}
+		\label{tab:contoh-t}
+		\begin{tabular}{llcc}
+			\toprule
+			\textbf{Framework} & \textbf{Bahasa} & \textbf{Pola Arsitektur} & \textbf{Tahun Rilis} \\
+			\midrule
+			Laravel & PHP & MVC & 2011 \\
+			Django & Python & MVT (Mirip MVC) & 2005 \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+}
