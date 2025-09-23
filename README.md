@@ -11,50 +11,48 @@ Repositori ini berisi semua file sumber LaTeX untuk penyusunan proposal skripsi 
 ## 📂 Struktur Proyek
 Proyek ini disusun dengan struktur modular untuk kemudahan manajemen.
 
-/ 📂 THESIS
-|
-|- 📂 assets
-|-- assets.tex
-|-- dan gambar-gambar lainnya.
-|
-|- 📂 frontmatter
-|-- Acknowledgements.tex
-|-- Statement-of-Originality.tex
-|-- Abstract.tex
-|-- authorization.tex
-|-- cover.tex
-|
-|-📂 maimatter
-|-- chapter-1.tex
-|-- chapter-2.tex
-|-- chapter-3.tex
-|-- chapter-4.tex
-|-- chapter-5.tex
-|
-|- TEMPLATE.cls (Temlate yang di gunakan)
-|- main.tex (File utama)
-|- references.bib (daftar pustaka)
+📁 THESIS/
+├── 📁 assets/
+│   ├── 📄 assets.tex
+│   └── 🖼️ (dan gambar-gambar lainnya)
+│
+├── 📁 frontmatter/
+│   ├── 📄 Abstract.tex
+│   ├── 📄 Acknowledgements.tex
+│   ├── 📄 authorization.tex
+│   ├── 📄 cover.tex
+│   └── 📄 Statement-Of-Originality.tex
+│
+├── 📁 mainmatter/
+│   ├── 📄 chapter-1.tex
+│   ├── 📄 chapter-2.tex
+│   ├── 📄 chapter-3.tex
+│   ├── 📄 chapter-4.tex
+│   └── 📄 chapter-5.tex
+│
+├── 📄 main.tex (File utama)
+├── 📄 references.bib (Daftar pustaka)
+└── 📄 TEMPLATE.cls (Template yang digunakan)
 
-/ 📂THESIS PROPOSAL
-|
-|- 📂 assets
-|-- assets.tex
-|-- dan gambar-gambar lainnya.
-|
-|- 📂 frontmatter
-|-- authorization.tex
-|-- cover.tex
-|
-|-📂 maimatter
-|-- chapter-1.tex
-|-- chapter-2.tex
-|-- chapter-3.tex
-|
-|- TEMPLATE.cls (Temlate yang di gunakan)
-|- main.tex (File utama)
-|- references.bib (daftar pustaka)
-|-.gitignore
-|- README.md
+📁 THESIS PROPOSAL/
+├── 📁 assets/
+│   ├── 📄 assets.tex
+│   └── 🖼️ (dan gambar-gambar lainnya)
+│
+├── 📁 frontmatter/
+│   ├── 📄 authorization.tex
+│   └── 📄 cover.tex
+│
+├── 📁 mainmatter/
+│   ├── 📄 chapter-1.tex
+│   ├── 📄 chapter-2.tex
+│   └── 📄 chapter-3.tex
+│
+├── 📄 .gitignore
+├── 📄 main.tex (File utama)
+├── 📄 README.md
+├── 📄 references.bib (Daftar pustaka)
+└── 📄 TEMPLATE.cls (Template yang digunakan)
 
 ---
 
