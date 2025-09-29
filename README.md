@@ -16,12 +16,22 @@ Gunakan Zotero untuk manajemen referensi yang rapi dan otomatis.
 **A. Setup (Hanya sekali di awal):**
 1.  Install aplikasi [Zotero](https://www.zotero.org/) di komputermu.
 2.  Install [Zotero Connector](https://www.zotero.org/download/connectors) untuk browser-mu.
+3.  (Opsional, tapi sangat canggih) Install *plugin* [Better BibTeX for Zotero](https://retorque.re/zotero-better-bibtex/installation/) untuk kontrol ekspor yang lebih baik.
 
 **B. Alur Kerja:**
 1.  **Simpan dari Web:** Saat menemukan sumber online, klik ikon Zotero di browser untuk menyimpannya.
 2.  **Tambahkan `langid`:** Di aplikasi Zotero, pada *field* **`Extra`**, tambahkan baris `langid: indonesian` atau `langid: english`.
-3.  **Export ke Proyek:** Di Zotero, pilih referensi -> klik kanan -> `Export Items...` -> pilih format `BibTeX` -> simpan sebagai `references.bib` di folder proyekmu.
+3.  **Export ke Proyek:** Di Zotero, pilih referensi -> klik kanan -> `Export Items...` -> pilih format **`Better BibTeX`** -> simpan sebagai `references.bib` di folder proyekmu.
 4.  **Gunakan di Teks:** Kutip dengan `\footcite{kunci_referensi}`.
+
+**C. Konfigurasi Lanjutan (Opsional): Menghilangkan Abstrak dari File `.bib`**
+Untuk menjaga file `references.bib`-mu tetap ringkas, kamu bisa mengatur Better BibTeX agar tidak menyertakan *field* abstrak saat mengekspor.
+1.  Di Zotero, buka `Edit` -> `Preferences...` (atau `Zotero` -> `Settings...` di Mac).
+2.  Pindah ke tab **`Better BibTeX`**.
+3.  Pilih sub-menu **`Export`** -> **`Fields`**.
+4.  Cari kotak isian **`Fields to omit from export`**.
+5.  Ketik **`abstract`** di dalam kotak tersebut.
+6.  Klik `OK`. Mulai sekarang, setiap kali kamu mengekspor, abstrak tidak akan ikut serta.
 
 ### 2. Konfigurasi TeXstudio (Setup Awal)
 Atur TeXstudio-mu sekali saja agar proses kompilasi otomatis:
