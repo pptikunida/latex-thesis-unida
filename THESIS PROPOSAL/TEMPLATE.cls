@@ -94,8 +94,6 @@
 \justifying
 \setlength{\parindent}{1.27cm}
 
-\input{assets/assets.tex}
-
 \endinput
 
 

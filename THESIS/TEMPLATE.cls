@@ -15,45 +15,52 @@
 %===================== CHAPTER & SECTION CONFIGURATION ===============
 \usepackage{titlesec}
 \usepackage{titletoc}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
 \AtBeginDocument{
 	\titleformat{name=\chapter,numberless}[display]
 	{\normalfont\bfseries\centering\fontsize{14pt}{16pt}\selectfont}
 	{}
 	{0pt}
 	{\MakeUppercase}
-	\titlespacing*{name=\chapter,numberless}{0pt}{-38pt}{10pt}
+	\titlespacing{name=\chapter,numberless}{0pt}{-38pt}{10pt}
 	
 	\titleformat{\chapter}[display]
 	{\normalfont\bfseries\centering\fontsize{14pt}{16pt}\selectfont}
 	{\MakeUppercase{\chaptertitlename}\ \thechapter}
 	{5pt}
 	{}
-	\titlespacing*{\chapter}{0pt}{-15pt}{10pt}
+	\titlespacing{\chapter}{0pt}{-15pt}{10pt}
 	
 	\titleformat{\section}[hang]
 	{\normalfont\bfseries}
 	{\thesection}
 	{0.5em}
 	{}
-	\titlespacing*{\section}{0.7cm}{10pt}{7pt}
+	\titlespacing{\section}{0.7cm}{10pt}{7pt}
 	
 	\titleformat{\subsection}[hang]
 	{\normalfont\bfseries}
 	{\thesubsection}
 	{0.5em}
 	{}
-	\titlespacing*{\subsection}{1.4cm}{10pt}{7pt}
+	\titlespacing{\subsection}{1.4cm}{10pt}{7pt}
 	
 	% =================== TOC CONFIGURATION ===================
-	\contentsmargin{2.55em}
-	\titlecontents{chapter}
-	[1.5em]{\bfseries}{\contentslabel{2.3em}}{\hspace*{-2.3em}}{\dotfill\contentspage}
-	\titlecontents{section}
-	[3.8em]{}{\thecontentslabel\enspace}{}{\dotfill\contentspage}
-	\titlecontents{subsection}
-	[7.0em]{}{\thecontentslabel\enspace}{}{\dotfill\contentspage}
+	\contentsmargin{2.5em}
+	
+	\titlecontents{chapter}[1.5em]
+	{\bfseries}{\MakeUppercase{\chaptername~\thecontentslabel:}\hspace{1em}}{}{\dotfill\contentspage}
+	
+	\titlecontents{section}[3em]
+	{}{\thecontentslabel\enspace}{}{\dotfill\contentspage}
+	
+	\titlecontents{subsection}[4.5em]
+	{}{\thecontentslabel\enspace}{}{\dotfill\contentspage}
 }
-
 % =================== VISUAL CONTENT ===================
 \usepackage{setspace}
 \usepackage{graphicx}
@@ -65,6 +72,7 @@
 \usepackage{subcaption}
 \usepackage[table]{xcolor}
 \usepackage{ragged2e}
+\usepackage{indentfirst}
 \usepackage{lipsum}
 \usepackage{xstring}
 %==================== ENUMERATE ====================
@@ -77,6 +85,11 @@
 \newlist{subsecenumerate}{enumerate}{3}
 \setlist[subsecenumerate,1]{label=\Alph*.,leftmargin=5em}
 \setlist[subsecenumerate,2]{label=(\roman*),leftmargin=*}
+
+\newlist{sysenumerate}{enumerate}{3}
+\setlist[sysenumerate,1]{label=\arabic*.,leftmargin=3em}
+\setlist[sysenumerate,2]{label=\thesysenumeratei\arabic*,leftmargin=*}
+\setlist[sysenumerate,3]{label=\thesysenumerateii.\arabic*,leftmargin=*}
 
 % =================== PREFERENCES ===================
 \usepackage{csquotes}
@@ -93,8 +106,6 @@
 
 \justifying
 \setlength{\parindent}{1.27cm}
-
-\input{assets/assets.tex}
 
 \endinput
 
